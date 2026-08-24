@@ -22,6 +22,9 @@ Built with a focus on sensible defaults for code quality, application structure,
 - Loading state
 - Error boundary
 - Custom 404 page
+- Basic security headers
+- Reduced framework fingerprint with `poweredByHeader: false`
+- Optimized font loading with `next/font`
 - Vitest
 - React Testing Library
 - GitHub Actions CI
@@ -248,6 +251,19 @@ The goal is to start with:
 - continuous integration
 
 From there, teams can add the architecture and capabilities their specific application requires.
+
+## Performance guidance
+
+This starter keeps performance-specific implementation minimal because the correct strategy depends on the application.
+
+When adding assets and integrations:
+
+- Use `next/font` for optimized font loading.
+- Prefer `next/image` for application images.
+- Use `next/script` to control third-party script loading.
+- Measure production builds with Lighthouse and real-world monitoring before optimizing.
+
+The starter provides the baseline. Application-specific performance decisions should follow actual requirements and measurements.
 
 ## What is intentionally not included
 
